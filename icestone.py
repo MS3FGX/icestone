@@ -31,14 +31,8 @@ except subprocess.CalledProcessError:
     print("No Amazon devices found!")
     exit()
 
-# Check and display results
-targetnumber = len(amzdevices)
-if targetnumber > 0:
-    print("Detected %i Amazon devices" % targetnumber)
-else:
-    # Bail out if we didn't get any results
-    print("No Amazon devices found!")
-    exit()
+# Display results
+print("Detected %i Amazon devices" % len(amzdevices))
 
 # Try to connect to ADB port on found devices
 print("Scanning discovered Amazon devices...")
